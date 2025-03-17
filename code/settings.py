@@ -1,0 +1,7 @@
+WIDTH, HEIGHT = 800, 600
+FPS = 60
+
+# Cores
+WHITE = (255, 255, 255)
+GREEN = (34, 177, 76)
+BROWN = (139, 69, 19)
