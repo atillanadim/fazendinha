@@ -3,16 +3,16 @@ import os
 import random
 
 class NPC:
-    def __init__(self, x, y, sprite_name, frame_count, width=32, height=32):
+    def __init__(self, x, y, sprite_name, frame_count, width=30, height=30):
         """
         Inicializa o NPC.
-        :param sprite_name: Nome do arquivo de sprite (ex: 'chicken.png' ou 'sheep.png')
+        :param sprite_name: Nome do arquivo de sprite (ex: 'PixelFarm_BabyChicken-Sheet.png' ou 'sheep.png')
         :param frame_count: Número total de frames na spritesheet
         """
 
-        sprite_path = os.path.join("assets", "sprites", sprite_name)
+        sprite_path = os.path.join("assets", "sprites", "chicken_baby_sprites", "chicken1.png")
         self.spritesheet = pygame.image.load(sprite_path).convert_alpha()
-        self.frames = self.load_frames(frame_count, width, height)
+        self.frames = self.load_frames(7, 30, 30)
         self.index = 0
         self.image = self.frames[self.index]
         self.rect = self.image.get_rect(topleft=(x, y))
